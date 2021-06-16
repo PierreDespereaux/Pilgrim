@@ -2,8 +2,8 @@ __**Special Thanks**__
 
 **FrankFamily** for allowing us to use his unreleased Shrines of Syrabane and Trinimac.\
 **opusGlass** for the Shrine of HoonDing.\
-**PierreDespereaux** for the majority the render window work.\
-**SoftboiRodvt** for the Dunmer House of Troubles Shrines and work in the render window.
+**PierreDespereaux** for the majority the level design work.\
+**SoftboiRodvt** for the Dunmer House of Troubles Shrines and level design.
 
 __**Assets Used**__
 
