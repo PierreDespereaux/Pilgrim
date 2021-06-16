@@ -12,6 +12,9 @@ The following assets are not part of my work and **need permission from the resp
 
 The following assets are not part of my work, but **are open source and can be freely used**:
 
+- Argonian Shrine of Sithis
+- Seamless Stone Textures
+- Shrine of Jone and Jode
 - Shrine of Sanguine
 - Shrine of Tall Papa
 - Snow Elf Pavilion
