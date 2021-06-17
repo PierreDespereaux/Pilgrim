@@ -4,25 +4,27 @@ Scriptname MAG_CreepySheoScript extends ObjectReference
 
 Actor Property PlayerRef auto
 int[] Property RotationAngles auto 
+ObjectReference Property ShrineBase auto
 
 ;-- Variables ---------------------------------------
 
 ;-- Functions ---------------------------------------
 
 EVENT OnLoad()
-    RegisterForSingleLOSLost(PlayerRef, self)      
-        debug.notification("SingleLOSLost registered!")
+   RegisterForSingleLOSGain(PlayerRef, ShrineBase )  
 ENDEVENT
 
-EVENT OnLostLOS(Actor akViewer, ObjectReference akTarget)
-        debug.notification("LOS lost on SheoShrine!")
-    self.SetAngle(0.0, self.GetAngleZ() - RotationAngles[Utility.randomInt(0,(RotationAngles.Length - 1))], 0.0)
-        debug.notification("SheoShrine has moved creepily!")
-    RegisterForSingleLOSLost(PlayerRef, self)
-        debug.notification("SingleLOSLost registered!")
+EVENT OnGainLOS(Actor akViewer, ObjectReference akTarget)    
+     RegisterForSingleLOSLost(PlayerRef, ShrineBase )  
+ENDEVENT
+
+EVENT OnLostLOS(Actor akViewer, ObjectReference akTarget)    
+    float AngleY = RotationAngles[Utility.randomInt(0,(RotationAngles.Length - 1))]
+    TranslateTo(GetPositionX(), GetPositionY(), GetPositionZ(), GetAngleX(), AngleY, GetAngleZ(), 0.0,0)
+    self.Disable()
+    self.Enable()    
 ENDEVENT
 
 EVENT OnUnload()
-    UnregisterForLOS(PlayerRef, self)
-        debug.notification("LOS unregistered!")
+    UnregisterForLOS(PlayerRef, ShrineBase )
 ENDEVENT
