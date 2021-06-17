@@ -14,5 +14,6 @@ __**Assets Used**__
 **kukatsuo** for the Shrine of Tall Papa taken from [Kukatsuo Weapon -Redguard Armory-](<https://www.nexusmods.com/skyrim/mods/102362>).\
 **Leodoidao** for the Redguard Tablecloth taken from [Arab art resource](<https://www.nexusmods.com/skyrim/mods/61774/>).\
 **mannygt** for the Argonian Shrine of Sithis taken from [The Gray Cowl of Nocturnal SE](<https://www.nexusmods.com/skyrimspecialedition/mods/4509>).\
+**PROMETHEUS_ts** for the Argonian Stone Skull taken from [Beast Skeletons](https://www.nexusmods.com/skyrim/mods/28957).\
 **Stroti** and **Tamira** for the Shrine of Jone and Jode taken from [Stroti Resource Pack](<https://www.nexusmods.com/skyrim/mods/36969>).\
 **skitamine** for the Shrine of Sanguine taken from [Sanguine squad assets](<https://www.nexusmods.com/skyrimspecialedition/mods/18503>).
