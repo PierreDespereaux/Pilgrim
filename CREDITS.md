@@ -7,7 +7,6 @@ __**Special Thanks**__
 
 __**Assets Used**__
 
-**Anna Vashchaeva** and **Adventurer1111** for the cheeky easter egg.\
 **billyro** for the Shrine of Mannimarco taken from [Billyro's Misc Mods](<https://www.nexusmods.com/skyrim/mods/79830>).\
 **cad435** for the Snow Elf Pavilion taken from [Snow Elves Reborn - Resource](<https://www.nexusmods.com/skyrim/mods/70099/>).\
 **FrankFamily** for the Shrines of Magnus, Sheor, Phynaster, Pelinal and Jephre taken from [Artifacts - The Breton Paladin](<https://www.nexusmods.com/skyrimspecialedition/mods/16199>).\
