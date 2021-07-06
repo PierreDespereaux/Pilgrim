@@ -5,7 +5,7 @@ __**Special Thanks**__
 **opusGlass** for the Shrine of HoonDing.\
 **FrankFamily** for allowing us to use his unreleased Shrines of Syrabane and Trinimac.\
 **colinswrath** for contributing some script work.\
-**EnaiSiaion** for providing inspiration for some of our shrine effects.
+**EnaiSiaion** for the Modern Brawl Bug Fix, a formlist we borrowed from Vokrii, and inspiration for a few gameplay ideas.
 
 __**Assets Used**__
 
