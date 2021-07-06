@@ -5,12 +5,12 @@ __**Special Thanks**__
 **opusGlass** for the Shrine of HoonDing.\
 **FrankFamily** for allowing us to use his unreleased Shrines of Syrabane and Trinimac.\
 **colinswrath** for contributing some script work.\
-**EnaiSiaion** for the Modern Brawl Bug Fix, a formlist we borrowed from Vokrii, and inspiration for a few gameplay ideas.
 
 __**Assets Used**__
 
 **billyro** for the Shrine of Mannimarco taken from [Billyro's Misc Mods](<https://www.nexusmods.com/skyrim/mods/79830>).\
 **cad435** for the Snow Elf Pavilion taken from [Snow Elves Reborn - Resource](<https://www.nexusmods.com/skyrim/mods/70099/>).\
+**EnaiSiaion** for the bundled [Modern Brawl Bug Fix](https://www.nexusmods.com/skyrimspecialedition/mods/1473) and a formlist taken from [Vokrii](https://www.nexusmods.com/skyrimspecialedition/mods/26176).\
 **FrankFamily** for the Shrines of Magnus, Sheor, Phynaster, Pelinal and Jephre taken from [Artifacts - The Breton Paladin](<https://www.nexusmods.com/skyrimspecialedition/mods/16199>).\
 **Incaendo** for the stone textures, used on a few of the new shrines, taken from [4k Seamless rock textures](<https://www.nexusmods.com/skyrim/mods/93827>).\
 **kukatsuo** for the Shrine of Tall Papa taken from [Kukatsuo Weapon -Redguard Armory-](<https://www.nexusmods.com/skyrim/mods/102362>).\
