@@ -4,7 +4,8 @@ __**Special Thanks**__
 **SoftboiRodvt** for the Dunmer House of Troubles Shrines.\
 **opusGlass** for the Shrine of HoonDing.\
 **FrankFamily** for allowing us to use his unreleased Shrines of Syrabane and Trinimac.\
-**colinswrath** for contributing some script work.
+**colinswrath** for contributing some script work.\
+**EnaiSiaion** for providing inspiration for some of our shrine effects.
 
 __**Assets Used**__
 
