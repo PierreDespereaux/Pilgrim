@@ -18,6 +18,6 @@ __**Assets Used**__
 **mannygt** for the Argonian Shrine of Sithis taken from [The Gray Cowl of Nocturnal SE](<https://www.nexusmods.com/skyrimspecialedition/mods/4509>).\
 **Parapets** for the Prayer power taken from [Pray With Amulets](https://www.nexusmods.com/skyrimspecialedition/mods/35248).\
 **PROMETHEUS_ts** for racial skull variants taken from [Beast Skeletons](https://www.nexusmods.com/skyrimspecialedition/mods/517).\
-**Ronnie Magnum** for the Shrine of Magnus taken from [Forgotten Shrine of Magnus](https://www.nexusmods.com/skyrim/mods/93157).\
+**Ronnie Magnum** for the Ayleid Shrine of Magnus taken from [Forgotten Shrine of Magnus](https://www.nexusmods.com/skyrim/mods/93157).\
 **Stroti** and **Tamira** for the Shrine of Jone and Jode taken from [Stroti Resource Pack](<https://www.nexusmods.com/skyrim/mods/36969>).\
 **skitamine** for the Shrine of Sanguine taken from [Sanguine squad assets](<https://www.nexusmods.com/skyrimspecialedition/mods/18503>).
