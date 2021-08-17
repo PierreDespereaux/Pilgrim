@@ -14,6 +14,7 @@ The following assets are not part of my work, but **are open source and can be f
 
 - Argonian Shrine of Sithis
 - Ayleid Shrine of Magnus
+- Prayer power scripts
 - Racial skull variants
 - Seamless Stone Textures
 - Shrine of Jone and Jode
