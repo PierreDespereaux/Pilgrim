@@ -12,6 +12,7 @@ __**Assets Used**__
 **cad435** for the Snow Elf Pavilion taken from [Snow Elves Reborn - Resource](<https://www.nexusmods.com/skyrim/mods/70099/>).\
 **EnaiSiaion** for the bundled [Modern Brawl Bug Fix](https://www.nexusmods.com/skyrimspecialedition/mods/1473) and a formlist taken from [Vokrii](https://www.nexusmods.com/skyrimspecialedition/mods/26176).\
 **FrankFamily** for the Shrines of Magnus, Sheor, Phynaster, Pelinal and Jephre taken from [Artifacts - The Breton Paladin](<https://www.nexusmods.com/skyrimspecialedition/mods/16199>).\
+**Imperial Society** for the Ada-Glathe ruins taken from [Ayleid Ruins Building Kit -Resources-](https://www.nexusmods.com/skyrim/mods/90667)\
 **Incaendo** for the stone textures, used on a few of the new shrines, taken from [4k Seamless rock textures](<https://www.nexusmods.com/skyrim/mods/93827>).\
 **kukatsuo** for the Shrine of Tall Papa taken from [Kukatsuo Weapon -Redguard Armory-](<https://www.nexusmods.com/skyrim/mods/102362>).\
 **Leodoidao** for the Redguard Tablecloth taken from [Arab art resource](<https://www.nexusmods.com/skyrim/mods/61774/>).\
