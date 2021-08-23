@@ -27,12 +27,10 @@ Auto State Start
             Actor kTargetActor = GetTargetActor()
 	
             MAG_BlessingStorageScript LastBlessingStorageScript = Quest.GetQuest("MAG_PilgrimPriestQuest") as MAG_BlessingStorageScript
-            if(LastBlessingStorageScript)   ;Null check just in case this script is somehow run on a shrine without the quest present
-                LastBlessingStorageScript.LastBlessing
-                LastBlessingStorageScript.LastMessage
-                LastBlessingStorageScript.LastBlessing.Cast(kTargetActor, kTargetActor)
-                if kTargetActor == Game.GetPlayer()
-                    LastBlessingStorageScript.LastMessage.Show()
+		if(LastBlessingStorageScript)   ;Null check just in case this script is somehow run on a shrine without the quest present
+			LastBlessingStorageScript.LastBlessing.Cast(kTargetActor, kTargetActor)
+		if kTargetActor == Game.GetPlayer()
+			LastBlessingStorageScript.LastMessage.Show()
                 endif
             Endif
 
