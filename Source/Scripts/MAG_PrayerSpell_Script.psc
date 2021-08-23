@@ -3,8 +3,6 @@ Scriptname MAG_PrayerSpell_Script extends ActiveMagicEffect
 ; This script is from Pray with Amulets by Parapets. The inspiration for Pilgrim's prayer mechanic was essentially "How can I make Pray with Amulets work without amulets?"
 
 Furniture Property PrayerMatBase Auto
-Spell Property Blessing Auto
-Message Property BlessingMessage Auto
 
 ObjectReference PrayerMatRef
 
@@ -28,16 +26,16 @@ Auto State Start
             Utility.Wait(0.5)
             Actor kTargetActor = GetTargetActor()
 	
-	        MAG_BlessingStorageScript LastBlessingStorageScript = (Game.GetFormFromFile(0x00126443,"Pilgrim.esp") as Quest) as MAG_BlessingStorageScript
+            MAG_BlessingStorageScript LastBlessingStorageScript = Quest.GetQuest("MAG_PilgrimPriestQuest") as MAG_BlessingStorageScript
             if(LastBlessingStorageScript)   ;Null check just in case this script is somehow run on a shrine without the quest present
-                Blessing = LastBlessingStorageScript.LastBlessing
-                BlessingMessage = LastBlessingStorageScript.LastMessage
+                LastBlessingStorageScript.LastBlessing
+                LastBlessingStorageScript.LastMessage
+                LastBlessingStorageScript.LastBlessing.Cast(kTargetActor, kTargetActor)
+                if kTargetActor == Game.GetPlayer()
+                    LastBlessingStorageScript.LastMessage.Show()
+                endif
             Endif
 
-            Blessing.Cast(kTargetActor, kTargetActor)
-            if kTargetActor == Game.GetPlayer()
-                BlessingMessage.Show()
-            endif
         endif
     EndEvent
 
