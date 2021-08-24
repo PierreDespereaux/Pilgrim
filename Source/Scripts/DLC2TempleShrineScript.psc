@@ -1,5 +1,4 @@
-Scriptname TempleBlessingScript extends ObjectReference Conditional  
-
+Scriptname DLC2TempleShrineScript extends ObjectReference  Conditional  
 
 Spell Property TempleBlessing  Auto  
 
