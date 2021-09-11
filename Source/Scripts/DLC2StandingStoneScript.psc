@@ -1,75 +1,39 @@
-Scriptname DLC2StandingStoneScript extends ObjectReference  
+scriptName DLC2StandingStoneScript extends ObjectReference
 
-PROJECTILE Property DLC2VoicePushProjectile01  Auto  
-PROJECTILE Property DLC2VoicePushProjectile03  Auto  
-SPELL Property DLC2SpellLearned  Auto  
-bool property Freed auto hidden
-float DelayReady
+;-- Properties --------------------------------------
+projectile property DLC2VoicePushProjectile01 auto
+sound property MAGStandingStoneActivateA auto
+spell property DLC2SpellLearned auto
+spell property TempleBlessing auto
+scene property DLC2PillarMiraakVoice auto
+message property DLC2StandingStoneNotReadyMsg auto
+sound property MAGStandingStoneActivateB auto
+imagespacemodifier property FadeToBlackHoldImod auto
+Bool property Freed auto hidden
+topic property DLC2PillarBlockingTopic auto
+imagespacemodifier property FadeToBlackImod auto
+globalvariable property GameDaysPassed auto
+projectile property DLC2VoicePushProjectile03 auto
+sound property DLC2StoneActivateSound auto
+spell property DLC2SacredStoneSpell auto
+referencealias property FollowerAtPillar auto
+imagespacemodifier property FadeToBlackBackImod auto
+message property BlessingMessage auto
+message property AltarRemoveMsg auto
+quest property DLC2Pillar auto
+scene property DLC2PillarFollowerScene auto
 
-; adding the properties from the shrine script
-
-Spell Property TempleBlessing  Auto  
-Message Property BlessingMessage  Auto  
-Message Property AltarRemoveMsg  Auto  
-
-auto State Waiting
-
-Event OnActivate(ObjectReference akActionRef)
-	gotoState("Busy")
-; 	debug.Trace("STANDING STONE: I've been touched")
-	if akActionRef == game.GetPlayer()
-		if Freed == true
-		
-;			we want the All-Maker Stones to function as shrines, so we won't be using these lines 
-		
-; 			debug.Trace("STANDING STONE: has been freed - DelayReady: " + DelayReady + ", GameDays: " + GameDaysPassed.GetValue())
-;			if GameDaysPassed.GetValue() > DelayReady && game.GetPlayer().HasSpell(DLC2SpellLearned) == false
-; 				debug.Trace("STANDINGSTONE: it's been a day since the spell was last added")
-;				DelayReady = GameDaysPassed.GetValue() + 0.75
-;				PlayAnimation("stage3")
-;				DLC2StoneActivateSound.play(self)				
-;				(akActionRef as actor).AddSpell(DLC2SpellLearned, true)
-; 				debug.Trace("STANDINGSTONE: DLC2SacredStoneSpell" + DLC2SacredStoneSpell)
-;				DLC2SacredStoneSpell.Cast(akActionRef)
-;			else
-;				DLC2StandingStoneNotReadyMsg.Show()
-;			endif
-
-;			if the stone is freed, it functions as a shrine. otherwise, carry on with stone things
-
-			TempleBlessing.Cast(akActionRef, akActionRef)
-			if akActionRef == Game.GetPlayer()
-				AltarRemoveMsg.Show()
-				BlessingMessage.Show()
-			endif		
-
-		else
-			WorkOnPillar(false)
-		endif
-	else
-		if Freed == false && (akActionRef as Actor)
-			WorkOnPillarNPC(akActionRef as Actor)
-		endif
-	endif
-	gotoState("Waiting")
-EndEvent
-
-endState
-
-State Busy
-	; do nothing
-EndState
+;-- Variables ---------------------------------------
+Float DelayReady
 
 function WorkOnPillarNPC(Actor pillarNPC)
-	; put into alias
-	FollowerAtPillar.ForceRefTo(pillarNPC)
-	; clear favor state
+
+	FollowerAtPillar.ForceRefTo(pillarNPC as ObjectReference)
 	pillarNPC.SetDoingFavor(false)
-	; work on pillar scene
 	DLC2PillarFollowerScene.Start()
 endFunction
 
-function WorkOnPillar(bool bSleepMove = true)
+function WorkOnPillar(Bool bSleepMove)
 	if GetLinkedRef()
 		; player blacks out, wakes up working on pillar
 		Game.DisablePlayerControls()
@@ -102,29 +66,41 @@ function WorkOnPillar(bool bSleepMove = true)
 
 endFunction
 
+State Busy
+	; do nothing
+EndState
 
-ImageSpaceModifier Property FadeToBlackImod  Auto  
+auto state Waiting
 
-ImageSpaceModifier Property FadeToBlackHoldImod  Auto  
-
-ImageSpaceModifier Property FadeToBlackBackImod  Auto  
-
-Topic Property DLC2PillarBlockingTopic  Auto  
-
-Scene Property DLC2PillarMiraakVoice  Auto  
-
-Quest Property DLC2Pillar  Auto  
-
-GlobalVariable Property GameDaysPassed  Auto  
-
-Message Property DLC2StandingStoneNotReadyMsg  Auto  
-
-Scene Property DLC2PillarFollowerScene  Auto  
-ReferenceAlias Property FollowerAtPillar Auto
-
-Sound Property MAGStandingStoneActivateA  Auto  
-Sound Property MAGStandingStoneActivateB  Auto  
-
-SPELL Property DLC2SacredStoneSpell  Auto  
-
-Sound Property DLC2StoneActivateSound  Auto  
+	function OnActivate(ObjectReference akActionRef)
+		GotoState("busy")
+		If Freed == true
+			PlayAnimation("stage3")
+			DLC2StoneActivateSound.play(self)
+			TempleBlessing.Cast(akActionRef, akActionRef)
+			If akActionRef == game.GetPlayer() as ObjectReference
+				RAF_PantheonTrackerStorageScript PantheonTracker = Game.GetFormFromFile(0x00000800, "WAP.esp") as RAF_PantheonTrackerStorageScript
+				If PantheonTracker
+					PantheonTracker.AddDeity(TempleBlessing, BlessingMessage)
+				EndIf
+				mag_blessingstoragescript LastBlessingStorageScript = quest.GetQuest("MAG_PilgrimPriestQuest") as mag_blessingstoragescript
+				if LastBlessingStorageScript
+					if !game.GetPlayer().HasSpell(LastBlessingStorageScript.Prayer as form)
+						If (!PantheonTracker || !PantheonTracker.pilgrimHidePrayer)
+							game.GetPlayer().AddSpell(LastBlessingStorageScript.Prayer, true)
+						EndIf
+					endIf
+					LastBlessingStorageScript.LastBlessing = TempleBlessing
+					LastBlessingStorageScript.LastMessage = BlessingMessage
+				endIf
+				AltarRemoveMsg.Show(0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000)
+				BlessingMessage.Show(0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000)
+			EndIf
+		ElseIf akActionRef == game.GetPlayer() as ObjectReference
+			WorkOnPillar(false)
+		ElseIf (akActionRef as Actor) as Bool
+			WorkOnPillarNPC(akActionRef as Actor)
+		EndIf
+		GotoState("Waiting")
+	endFunction
+endState
