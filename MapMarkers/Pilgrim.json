@@ -1,0 +1,9 @@
+{
+	"mapMarkers": [{
+		"refID": "Pilgrim.esp|0x005BB3A",
+		"icon": 67
+	}, {
+		"refID": "Pilgrim.esp|0x00F8B3B",
+		"icon": 67
+	}]
+}
