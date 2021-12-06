@@ -1,9 +1,10 @@
-Scriptname TempleBlessingScript extends ObjectReference Conditional  
-
+Scriptname MAG_MolagBalTempleBlessingScript extends ObjectReference  
 
 Spell Property TempleBlessing  Auto  
 
 EVENT OnActivate(ObjectReference akActionRef)
+
+IF DA10.IsStageDone(80) == 1
 
     TempleBlessing.Cast(akActionRef, akActionRef)
     IF akActionRef == PlayerRef
@@ -22,13 +23,16 @@ EVENT OnActivate(ObjectReference akActionRef)
         ENDIF
         AltarRemoveMsg.Show()
         BlessingMessage.Show()
-        
     ENDIF
-      
+
+ENDIF
+
 ENDEVENT
 
 Message Property BlessingMessage  Auto  
 
 Message Property AltarRemoveMsg  Auto  
+
+Quest Property DA10 auto
 
 Actor Property PlayerRef auto

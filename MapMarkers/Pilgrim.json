@@ -1,9 +1,12 @@
 {
-	"mapMarkers": [{
-		"refID": "Pilgrim.esp|0x005BB3A",
-		"icon": 67
-	}, {
-		"refID": "Pilgrim.esp|0x00F8B3B",
-		"icon": 67
-	}]
+// [Pilgrim - A Religion Overhaul] (https://www.nexusmods.com/skyrimspecialedition/mods/54099)
+  "mapMarkers": [
+    {
+      "refID": "Pilgrim.esp|5BB3A", // Glathe
+      "iconName": "ElvenRuinsMarker"
+    }, {
+      "refID": "Pilgrim.esp|F8B3B", // Auta
+      "iconName": "ElvenRuinsMarker"
+    }
+  ]
 }
