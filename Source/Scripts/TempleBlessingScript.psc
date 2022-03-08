@@ -1,9 +1,10 @@
 Scriptname TempleBlessingScript extends ObjectReference Conditional  
 
-
-Spell Property TempleBlessing  Auto  
-
 EVENT OnActivate(ObjectReference akActionRef)
+
+Int iButton = MAG_BlessingAcceptMsg.Show() ; Shows yes/no menu
+
+IF iButton == 0  ; Yes
 
     TempleBlessing.Cast(akActionRef, akActionRef)
     IF akActionRef == PlayerRef
@@ -24,11 +25,19 @@ EVENT OnActivate(ObjectReference akActionRef)
         BlessingMessage.Show()
         
     ENDIF
-      
+
+ELSEIF iButton == 1  ; No
+
+ENDIF	
+
 ENDEVENT
 
-Message Property BlessingMessage  Auto  
+Actor Property PlayerRef Auto 
 
-Message Property AltarRemoveMsg  Auto  
+Message Property BlessingMessage Auto  
 
-Actor Property PlayerRef auto
+Message Property AltarRemoveMsg Auto
+
+Message Property MAG_BlessingAcceptMsg Auto
+
+Spell Property TempleBlessing Auto
