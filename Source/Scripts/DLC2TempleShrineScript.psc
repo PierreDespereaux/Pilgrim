@@ -1,10 +1,8 @@
-Scriptname DLC2TempleShrineScript extends ObjectReference  Conditional   
+Scriptname DLC2TempleShrineScript extends ObjectReference  Conditional  
+
+Spell Property TempleBlessing  Auto  
 
 EVENT OnActivate(ObjectReference akActionRef)
-
-Int iButton = MAG_BlessingAcceptMsg.Show() ; Shows yes/no menu
-
-IF iButton == 0  ; Yes
 
     TempleBlessing.Cast(akActionRef, akActionRef)
     IF akActionRef == PlayerRef
@@ -25,19 +23,11 @@ IF iButton == 0  ; Yes
         BlessingMessage.Show()
         
     ENDIF
-
-ELSEIF iButton == 1  ; No
-
-ENDIF	
-
+      
 ENDEVENT
 
-Actor Property PlayerRef Auto 
+Message Property BlessingMessage  Auto  
 
-Message Property BlessingMessage Auto  
+Message Property AltarRemoveMsg  Auto  
 
-Message Property AltarRemoveMsg Auto
-
-Message Property MAG_BlessingAcceptMsg Auto
-
-Spell Property TempleBlessing Auto
+Actor Property PlayerRef auto
