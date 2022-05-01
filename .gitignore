@@ -1,2 +1,4 @@
-
-*.zip
+meta.ini
+archives
+MCM/settings
+*.7z
